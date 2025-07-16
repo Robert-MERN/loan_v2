@@ -211,7 +211,7 @@ const Repayment_tab = ({ axios }) => {
 
                                         <p className='text-[15px] mt-2'>Use Mobile Scan code to pay</p>
                                         <p className='text-[24px] font-bold text-red-500 mb-2'>₹ {loan.loan_amount}.00</p>
-                                        <QrCanvas text={payment_info.qr_scanner} />
+                                        <QrCanvas text={`${payment_info.qr_scanner}&am=${loan.loan_amount}.00&cu=INR`} />
 
                                         <p className='mt-1 text-stone-400 text-[15px] font-medium'>Do not use the same QR code to pay multiple times</p>
                                     </div>
